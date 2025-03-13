@@ -25,7 +25,7 @@
 	let showModal = $state(false);
 </script>
 
-<section class="relative top-0 h-fit rounded-xl bg-white p-6 sm:sticky sm:min-w-[25%]">
+<section class="relative top-0 h-fit rounded-xl bg-white p-6 sm:sticky sm:min-w-[32%] lg:min-w-[25%]">
 	<h2 class="text-red mb-3 text-2xl font-bold">Your Cart ({$result.total})</h2>
 	<div>
 		{#each $desserts as dessert, index}
@@ -36,7 +36,7 @@
 					out:fly={{ x: 100, duration: 300 }}
 				>
 					<div>
-						<h6 class="mb-2 font-semibold">{dessert.name}</h6>
+						<h6 class="mb-2 font-semibold line-clamp-1">{dessert.name}</h6>
 						<p class="flex gap-3">
 							<span class="text-red font-semibold">{dessert.quantity}x</span>
 							<span class="text-rose-500">@ ${dessert.price.toFixed(2)}</span>

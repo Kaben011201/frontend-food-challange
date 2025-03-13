@@ -4,6 +4,10 @@
   font-family: "Red Hat Text", sans-serif;
 }
 
+:root {
+  @apply bg-rose-100;
+}
+
 button{
   @apply cursor-pointer
 }
@@ -29,5 +33,6 @@ button{
 
 
   --breakpoint-xs: 23.438rem;
+  --breakpoint-sm: 50rem;
   --spacing-desktop: 90rem; 
 }
