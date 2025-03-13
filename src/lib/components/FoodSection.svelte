@@ -37,22 +37,22 @@
 	<figure>
 		{#each $desserts as dessert, index}
 			<div class="relative mb-8 ">
-				<img src={dessert.image['mobile']} class="w-full rounded-xl transition-all duration-100 ease-linear  {dessert.quantity > 0 ? 'outline-1 outline-red' : 'outline-none  outline-transparent'}" alt={dessert.name} />
+				<img src={dessert.image['mobile']} class="w-full rounded-xl transition-costum {dessert.quantity > 0 ? 'outline-1 outline-red' : 'outline-none  outline-transparent'}" alt={dessert.name} />
 				<div
-					class="absolute left-1/2 -translate-x-1/2  -bottom-5 rounded-3xl border-rose-500 {dessert?.quantity >
+					class="absolute left-1/2 -translate-x-1/2 -bottom-5 rounded-3xl border-rose-500 {dessert?.quantity >
 					0
 						? 'bg-red'
 						: 'bg-white border'} px-4 py-2 font-semibold"
 				>
 					{#if dessert?.quantity <= 0}
 						<button
-							class="flex w-full items-center justify-center gap-2"
+							class="flex w-full items-center justify-center gap-2 text-sm min-w-32"
 							onclick={() => CartHandler(index, 'increas')}
 						>
 							<img src={addToCart} alt="add to cart {index}" /> Add to Cart
 						</button>
 					{:else}
-						<div class="flex justify-between items-center">
+						<div class="flex justify-between items-center min-w-32">
 							<button class="mini-icon !py-[6px]" onclick={() => CartHandler(index, 'decreas')}>
 								<img src={removeQuantity} alt="decrement {index}" />
 							</button>

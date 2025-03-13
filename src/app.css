@@ -12,6 +12,10 @@ button{
   @apply w-4 border border-rose-300 p-[2px] rounded-full
 }
 
+.transition-costum{
+  @apply transition-all duration-300 ease-linear
+}
+
 @theme {
   --color-red: hsl(14, 86%, 42%);
   --color-green: hsl(159, 69%, 38%);
