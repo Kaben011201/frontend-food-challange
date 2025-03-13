@@ -27,20 +27,26 @@
 	}
 </script>
 
-<div class="fixed inset-0 bg-black/30" {onclick} aria-hidden="true" transition:fade></div>
 <div
-	class="fixed inset-x-0 bottom-0 max-h-[calc(100vh-5rem)] space-y-6 rounded-t-xl bg-white px-6 pt-8 pb-6"
-	transition:fly={{ y: 200, duration: 500 }}
+	class="fixed inset-0 flex items-end bg-black/30 sm:items-center sm:justify-center"
+	{onclick}
+	aria-hidden="true"
+	transition:fade
 >
-	<img src={confirmIcon} alt="confirm icon" />
-	<div class="space-y-1">
-		<h1 class="text-4xl font-bold">Order</h1>
-		<h1 class="text-4xl font-bold">Confirmed</h1>
-		<p class="text-rose-400">We hope you enjoy your food</p>
-	</div>
-	<div class="max-h-[calc(29rem-5rem)] space-y-6 overflow-y-auto">
-		<div class="rounded-2xl bg-rose-100 px-6 pt-2 pb-6">
-			{#each $desserts as dessert, index}
+	<div
+		class="max-h-[calc(100vh-5rem)] w-full space-y-6 rounded-t-xl bg-white px-6 pt-8 pb-6 sm:max-w-lg sm:rounded-xl"
+		transition:fly={{ y: 200, duration: 500 }}
+	>
+		<img src={confirmIcon} alt="confirm icon" />
+		<div class="space-y-1">
+			<h1 class="text-4xl font-bold">Order</h1>
+			<h1 class="text-4xl font-bold">Confirmed</h1>
+			<p class="text-rose-400">We hope you enjoy your food</p>
+		</div>
+
+		<div class="rounded-2xl bg-rose-100">
+			<div class="max-h-[calc(20rem-5rem)] sm:max-h-[calc(30rem-5rem)] overflow-y-auto px-6 pt-2 pb-6">
+				{#each $desserts as dessert, index}
 				{#if dessert.quantity > 0}
 					<div class="flex items-center justify-between border-b-[0.2px] border-rose-300 py-4">
 						<div class="flex items-center gap-4">
@@ -61,7 +67,8 @@
 					</div>
 				{/if}
 			{/each}
-			<div class="mt-5 flex items-center justify-between">
+			</div>
+			<div class="flex items-center justify-between px-6 pt-2 pb-6">
 				<p>Order Total</p>
 				<h3 class="text-2xl font-bold">${$result?.price.toFixed(2)}</h3>
 			</div>

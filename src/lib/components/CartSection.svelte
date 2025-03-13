@@ -1,5 +1,5 @@
 <script>
-	import xIcon from '$assets/icons/icon-remove-item.svg';
+	import xIcon from '$assets/icons/icon-remove-item.svg?raw';
 	import carbonIcon from '$assets/icons/icon-carbon-neutral.svg';
 	import emptyCart from '$assets/icons/illustration-empty-cart.svg';
 	import { desserts, result } from '../../shared';
@@ -25,7 +25,7 @@
 	let showModal = $state(false);
 </script>
 
-<section class="transition-costum relative rounded-xl bg-white p-6">
+<section class="relative top-0 h-fit rounded-xl bg-white p-6 sm:sticky sm:min-w-[25%]">
 	<h2 class="text-red mb-3 text-2xl font-bold">Your Cart ({$result.total})</h2>
 	<div>
 		{#each $desserts as dessert, index}
@@ -45,8 +45,11 @@
 							>
 						</p>
 					</div>
-					<button onclick={() => removeItem(index)}>
-						<img src={xIcon} alt="remove item" class="mini-icon" />
+					<button
+						onclick={() => removeItem(index)}
+						class="mini-icon !border-rose-300 text-rose-300 hover:!border-rose-500 hover:text-rose-500"
+					>
+						{@html xIcon}
 					</button>
 				</div>
 			{/if}
@@ -64,7 +67,7 @@
 				</div>
 
 				<button
-					class="bg-red w-full rounded-4xl py-3 text-lg font-semibold text-rose-100"
+					class="bg-red hover:bg-red-hover w-full rounded-4xl py-3 text-lg font-semibold text-rose-100"
 					onclick={() => (showModal = true)}>Confirm Order</button
 				>
 			</div>

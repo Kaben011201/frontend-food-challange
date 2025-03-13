@@ -1,7 +1,8 @@
 <script>
-	import { CartSection, FoodSection } from "$components";
+	import { CartSection, FoodSection } from '$components';
 </script>
 
-<FoodSection/>
-<CartSection/>
-
+<div class="sm:flex max-w-desktop mx-auto gap-10 h-screen">
+	<FoodSection />
+	<CartSection />
+</div>
