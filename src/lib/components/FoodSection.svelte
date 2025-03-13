@@ -39,7 +39,7 @@
 			<div class="relative mb-8 ">
 				<img src={dessert.image['mobile']} class="w-full rounded-xl transition-all duration-100 ease-linear  {dessert.quantity > 0 ? 'outline-1 outline-red' : 'outline-none  outline-transparent'}" alt={dessert.name} />
 				<div
-					class="absolute inset-x-24 -bottom-5 rounded-3xl  border-rose-500 {dessert?.quantity >
+					class="absolute left-1/2 -translate-x-1/2  -bottom-5 rounded-3xl border-rose-500 {dessert?.quantity >
 					0
 						? 'bg-red'
 						: 'bg-white border'} px-4 py-2 font-semibold"
