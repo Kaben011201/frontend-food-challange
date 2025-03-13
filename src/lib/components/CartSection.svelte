@@ -1,7 +1,7 @@
 <script>
-	import xIcon from '$assets/images/icon-remove-item.svg';
-	import carbonIcon from '$assets/images/icon-carbon-neutral.svg';
-  import emptyCart from '$assets/images/illustration-empty-cart.svg';
+	import xIcon from '$assets/icons/icon-remove-item.svg';
+	import carbonIcon from '$assets/icons/icon-carbon-neutral.svg';
+  import emptyCart from '$assets/icons/illustration-empty-cart.svg';
 	import { desserts, result } from '../../shared';
 
 	function removeItem(index) {
@@ -33,7 +33,7 @@
 						<span class="text-red font-semibold">{dessert.quantity}x</span>
 						<span class="text-rose-500">@ ${dessert.price.toFixed(2)}</span>
 						<strong class="font-semibold text-rose-500"
-							>${dessert.quantity * dessert.price.toFixed(2)}</strong
+							>${(dessert.quantity * dessert.price).toFixed(2)}</strong
 						>
 					</p>
 				</div>
@@ -46,7 +46,7 @@
 	{#if $result.total > 0}
   <div class="my-5 flex items-center justify-between">
 		<p>Order Total</p>
-		<h3 class="text-2xl font-bold">${$result?.price}</h3>
+		<h3 class="text-2xl font-bold">${$result?.price.toFixed(2)}</h3>
 	</div>
 
 	<div class="mb-4 flex gap-2 rounded-xl bg-rose-100 px-4 py-3">

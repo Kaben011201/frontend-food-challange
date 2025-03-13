@@ -1,8 +1,8 @@
 <script>
 	import { desserts, result } from '../../shared';
-	import addToCart from '$assets/images/icon-add-to-cart.svg';
-	import addQuantity from '$assets/images/icon-increment-quantity.svg';
-	import removeQuantity from '$assets/images/icon-decrement-quantity.svg';
+	import addToCart from '$assets/icons/icon-add-to-cart.svg';
+	import addQuantity from '$assets/icons/icon-increment-quantity.svg';
+	import removeQuantity from '$assets/icons/icon-decrement-quantity.svg';
 
 	function CartHandler(index, type='') {
 		desserts.update((currentCart) => {
