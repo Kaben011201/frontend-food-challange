@@ -34,7 +34,7 @@
 	transition:fade
 >
 	<div
-		class="max-h-[calc(100vh-5rem)] w-full space-y-6 rounded-t-xl bg-white px-6 pt-8 pb-6 sm:max-w-lg sm:rounded-xl"
+		class="w-full space-y-6 rounded-t-xl bg-white px-6 pt-8 pb-6 sm:max-w-lg sm:rounded-xl"
 		transition:fly={{ y: 200, duration: 500 }}
 	>
 		<img src={confirmIcon} alt="confirm icon" />
@@ -45,7 +45,7 @@
 		</div>
 
 		<div class="rounded-2xl bg-rose-100">
-			<div class="max-h-[calc(20rem-5rem)] sm:max-h-[calc(30rem-5rem)] overflow-y-auto px-6 pt-2 pb-6">
+			<div class="max-h-[calc(20rem-5rem)] sm:max-h-[calc(25rem-5rem)] overflow-y-auto px-6 pt-2 pb-6">
 				{#each $desserts as dessert, index}
 				{#if dessert.quantity > 0}
 					<div class="flex items-center justify-between border-b-[0.2px] border-rose-300 py-4">
