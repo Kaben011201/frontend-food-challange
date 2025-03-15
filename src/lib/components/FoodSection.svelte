@@ -94,7 +94,7 @@
 				</div>
 				<figcaption class="mb-6">
 					<p class="text-sm text-rose-500">{dessert.category}</p>
-					<h4 class="font-semibold">{dessert.name}</h4>
+					<p class="font-semibold">{dessert.name}</p>
 					<p class="text-red font-semibold">${dessert.price.toFixed(2)}</p>
 				</figcaption>
 			</figure>
